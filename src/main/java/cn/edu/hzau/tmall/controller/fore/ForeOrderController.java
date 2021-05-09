@@ -618,7 +618,7 @@ public class ForeOrderController extends BaseController {
     //AliPay支付成功，更新订单信息为已支付，待发货-ajax
     @ResponseBody
     @RequestMapping(value = "order/pay/{order_code}", method = RequestMethod.PUT)
-    public String orderPay(HttpSession session, @PathVariable("order_code") String order_code) throws AlipayApiException {
+    public String orderPay(HttpSession session, @PathVariable("order_code") String order_code) {
         JSONObject object = new JSONObject();
         logger.info("检查用户是否登录");
         Object userId = checkUser(session);
