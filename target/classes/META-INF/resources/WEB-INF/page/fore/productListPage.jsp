@@ -80,7 +80,7 @@
                             <p class="context_product_price"><span>¥</span>${product.product_sale_price}</p>
                             <p class="context_product_name"><a href="/tmall/product/${product.product_id}"
                                                                target="_blank">${product.product_name}</a></p>
-                            <p class="context_product_shop"><span>贤趣${product.product_category.category_name}旗舰店</span>
+                            <p class="context_product_shop"><span>${product.product_category.category_name}旗舰店</span>
                             </p>
                             <p class="context_product_status">
                                 <span class="status_left">总成交<em><c:choose><c:when

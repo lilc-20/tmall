@@ -30,13 +30,13 @@ public class AliPayController extends BaseController {
         AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();
 
         //商户订单号，商户网站订单系统中唯一订单号，必填
-        String out_trade_no = new String("2");
+        String out_trade_no = new String("202105091320250118");
         //付款金额，必填
-        String total_amount = new String("200");
+        String total_amount = new String("4088");
         //订单名称，必填
-        String subject = new String("123");
+        String subject = new String("Huawei/华为 P20 全面屏徕卡双摄正品4G手机");
         //商品描述，可空
-        String body = new String("123");
+        String body = new String("");
 
         alipayRequest.setBizContent("{\"out_trade_no\":\""+ out_trade_no +"\","
                 + "\"total_amount\":\""+ total_amount +"\","

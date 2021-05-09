@@ -110,7 +110,7 @@
             <tr>
                 <td colspan="4">
                     <span class="info_label">卖家商铺昵称：</span>
-                    <span class="info_value">贤趣模拟旗舰店</span>
+                    <span class="info_value">模拟旗舰店</span>
                 </td>
             </tr>
             <tr>

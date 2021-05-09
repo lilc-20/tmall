@@ -116,7 +116,7 @@
                 <c:forEach items="${requestScope.orderItemList}" var="orderItem">
                     <tr class="orderItem_category">
                         <td colspan="6"><span class="shop_logo"></span><span
-                                class="category_shop">店铺：贤趣${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
+                                class="category_shop">店铺：${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
                         </td>
                     </tr>
                     <tr class="orderItem_info">
@@ -196,7 +196,7 @@
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">提示</h4>
             </div>
-            <div class="modal-body">您确定要取消该宝贝吗？</div>
+            <div class="modal-body">您确定要删除该物品吗？</div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" id="btn-ok">确定</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-close">关闭</button>

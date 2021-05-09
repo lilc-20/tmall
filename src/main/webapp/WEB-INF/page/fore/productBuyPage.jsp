@@ -95,7 +95,7 @@
             <c:forEach items="${requestScope.orderItemList}" var="orderItem" varStatus="i">
                 <tr class="tr_shop">
                     <td><span class="span_shopTitle">店铺：</span><span
-                            class="span_shopName">贤趣${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
+                            class="span_shopName">${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
                     </td>
                     <td></td>
                     <td></td>

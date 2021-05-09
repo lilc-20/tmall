@@ -12,7 +12,7 @@
     <div class="header">
         <a href="${pageContext.request.contextPath}"><img
                 src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoB.png"></a>
-        <span class="shopNameHeader">贤趣${requestScope.product.product_category.category_name}官方旗舰店</span>
+        <span class="shopNameHeader">${requestScope.product.product_category.category_name}官方旗舰店</span>
         <input id="tid" type="hidden" value="${requestScope.product.product_category.category_id}"/>
         <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/detailsHeaderA.png"
              class="shopAssessHeader">
@@ -52,7 +52,7 @@
             <form method="post" class="loginForm">
                 <div class="loginInputDiv">
                     <label for="name" class="loginLabel"><img
-                            src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/2018-04-27_235518.png"
+                            src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/2021-03-27_235518.png"
                             width="38px" height="39px" title="会员名"/></label>
                     <input type="text" name="name" id="name" class="loginInput" placeholder="会员名/邮箱/手机号">
                 </div>
