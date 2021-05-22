@@ -21,7 +21,7 @@ import java.util.Random;
 import static com.squareup.okhttp.internal.Internal.logger;
 
 @Controller
-public class SmsController {
+public class SmsController extends BaseController {
     @Resource(name = "userService")
     private UserService userService;
 
