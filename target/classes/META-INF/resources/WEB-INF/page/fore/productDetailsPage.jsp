@@ -78,8 +78,6 @@
             <div class="qrcodeMain">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcode.png"
                      id="qrcodeA"/>
-                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcodeB.png"
-                     id="qrcodeB"/>
             </div>
             <div class="loginLinks">
                 <a href="JavaScript:void(0)" id="pwdLogin">密码登录</a>

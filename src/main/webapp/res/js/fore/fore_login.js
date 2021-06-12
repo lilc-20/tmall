@@ -24,6 +24,19 @@ $(function () {
             messageSpan.text("扫码登录更安全");
             $(this).removeClass("loginSwitch_two").addClass("loginSwitch");
         }
+
+        $.ajax({
+            type: "GET",
+            url: "/tmall/face/getQRcode",
+            data: null,
+            dataType: "json",
+            success: function (data) {
+                if (data.success) {
+
+                }
+            }
+        });
+
     });
     $("#pwdLogin").click(function () {
         var messageSpan = $(".loginMessageMain").children("span");

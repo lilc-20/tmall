@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.hzau.tmall.dao.FaceMapper">
+    <insert id="insertOne" parameterType="face">
+        INSERT face (user_face_id, user_face_picture_src, user_name)
+        VALUES (
+        null,
+        #{face.user_face_picture_src},
+        #{face.user_name})
+    </insert>
+</mapper>

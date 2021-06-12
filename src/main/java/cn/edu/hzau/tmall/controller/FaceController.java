@@ -6,6 +6,11 @@ import cn.edu.hzau.tmall.util.AipFaceConfig;
 import com.alibaba.fastjson.JSONObject;
 import com.baidu.aip.face.AipFace;
 import com.baidu.aip.util.Base64Util;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,10 +19,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpSession;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.UUID;
@@ -110,5 +119,37 @@ public class FaceController extends BaseController {
         object.put("success", true);
 
         return object.toString();
+    }
+
+    //获取二维码
+    @ResponseBody
+    @RequestMapping(value = "face/getQRcode" , method = RequestMethod.GET)
+    public String getQRcode(HttpSession session) throws WriterException, IOException {
+
+        logger.info("生成url地址");
+        String content = "www.baidu.com";
+
+        logger.info("生成二维码");
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+        BitMatrix bitMatrix = qrCodeWriter.encode(content, BarcodeFormat.QR_CODE, 200, 200);//二维码信息、图片类型、宽度、长度
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        BufferedImage image = MatrixToImageWriter.toBufferedImage(bitMatrix);
+        ImageIO.write(image, "png", os);
+        String encode = Base64Util.encode(os.toByteArray());
+        System.out.println(new String("data:image/png;base64," + encode));
+
+        JSONObject object = new JSONObject();
+        object.put("success", true);
+        return object.toString();
+    }
+
+    //识别人脸
+    @ResponseBody
+    @RequestMapping(value = "face/login" , method = RequestMethod.POST)
+    public String register() {
+
+
+
+        return "";
     }
 }

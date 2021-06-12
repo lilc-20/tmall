@@ -74,11 +74,12 @@
         <div class="qrcodeLogin">
             <span class="loginTitle">人脸识别安全登录</span>
             <div class="qrcodeMain">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcode.png"
-                     id="qrcodeA"/>
-                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcodeB.png"
-                     id="qrcodeB"/>
+                     id="qrcode"/>
             </div>
+            <br>
+            <br>
             <div class="qrcodeFooter">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan_icon2.png">
                 <p>扫一扫登录</p>
