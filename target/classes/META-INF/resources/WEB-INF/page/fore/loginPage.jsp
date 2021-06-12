@@ -42,7 +42,7 @@
         <div class="loginMessage">
             <div class="loginMessageMain">
                 <div class="poptip-arrow"><em></em><span></span></div>
-                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan-safe.png"/><span>扫码登录更安全</span>
+                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan-safe.png"/><span>扫脸登录更安全</span>
             </div>
         </div>
         <div class="pwdLogin">
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="qrcodeLogin">
-            <span class="loginTitle">手机扫码，安全登录</span>
+            <span class="loginTitle">人脸识别安全登录</span>
             <div class="qrcodeMain">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcode.png"
                      id="qrcodeA"/>
@@ -81,12 +81,11 @@
             </div>
             <div class="qrcodeFooter">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan_icon2.png">
-                <p>打开 <a href="https://www.tmall.com/wow/portal/act/app-download">手机天猫</a> | <a
-                        href="https://www.taobao.com/m">手机淘宝</a>扫一扫登录</p>
+                <p>扫一扫登录</p>
             </div>
             <div class="loginLinks">
                 <a href="JavaScript:void(0)" id="pwdLogin">密码登录</a>
-                <a href="${pageContext.request.contextPath}/register">免费注册</a>
+                <a href="${pageContext.request.contextPath}/face/register">免费注册</a>
             </div>
         </div>
     </div>

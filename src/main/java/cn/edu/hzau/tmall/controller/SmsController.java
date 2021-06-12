@@ -54,6 +54,12 @@ public class SmsController extends BaseController {
             object.put("success", false);
             object.put("msg", "账号不存在！");
             return object.toJSONString();
+        } else if (count_phone == 0 && templateId.equals("975518")/*重置密码*/) {
+            logger.info("手机号不存在，返回错误信息");
+            JSONObject object = new JSONObject();
+            object.put("success", false);
+            object.put("msg", "账号不存在！");
+            return object.toJSONString();
         }
 
         logger.info("生成6位随机验证码");

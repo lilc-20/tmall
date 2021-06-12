@@ -21,4 +21,5 @@ public interface UserService {
     boolean updatePwd(String user_name, String user_password);
 
     Integer checkPhone(String user_name, String user_phone);
+
 }

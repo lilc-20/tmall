@@ -46,7 +46,7 @@
         <div class="mt-avatar">
             <img src="${pageContext.request.contextPath}/res/images/item/userProfilePicture/${requestScope.user.user_profile_picture_src}"
                  onerror="this.src='${pageContext.request.contextPath}/res/images/admin/loginPage/default_profile_picture-128x128.png'"
-                 width="128px" height="128px">
+                 width="50px" height="50px">
         </div>
         <div class="mt-menu-tree">
             <p>个人信息</p>
