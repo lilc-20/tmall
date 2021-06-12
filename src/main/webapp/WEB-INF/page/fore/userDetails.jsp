@@ -88,18 +88,6 @@
                     <span class="form_span"></span>
                 </div>
                 <div class="form-item">
-                    <label class="form-label tsl">登录密码：</label>
-                    <input name="user_password" type="password" id="user_password" class="form-text err-input"
-                           placeholder="请设置登录密码" maxlength="20">
-                    <span class="form_span"></span>
-                </div>
-                <div class="form-item">
-                    <label class="form-label tsl">确认密码：</label>
-                    <input name="user_password_one" type="password" id="user_password_one" class="form-text err-input"
-                           placeholder="请再次输入你的密码" maxlength="20">
-                    <span class="form_span"></span>
-                </div>
-                <div class="form-item">
                     <label class="form-label tsl">性别：</label>
                     <input name="user_gender" type="radio" id="form_radion" value="0"
                            <c:if test="${requestScope.user.user_gender == 0}">checked="checked"</c:if>><span

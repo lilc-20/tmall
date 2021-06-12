@@ -22,4 +22,5 @@ public interface UserService {
 
     Integer checkPhone(String user_name, String user_phone);
 
+    User faceLogin(String user_name);
 }

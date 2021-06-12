@@ -76,12 +76,25 @@
         <div class="qrcodeLogin">
             <span class="loginTitle">人脸识别安全登录</span>
             <div class="qrcodeMain">
-                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcode.png"
-                     id="qrcodeA"/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <video id="video" width="200" height="200" autoplay="autoplay"></video>
+                <canvas id="canvas" width="200" height="200" hidden="true"></canvas>
+            </div>
+            <br>
+            <br>
+            <div class="qrcodeFooter">
+                <button id="openCamera">开启摄像头</button>
+                &nbsp
+                <button id="closeCamera">关闭</button>
+                &nbsp
+                <button id="faceLogin">识别</button>
             </div>
             <div class="loginLinks">
                 <a href="JavaScript:void(0)" id="pwdLogin">密码登录</a>
-                <a href="${pageContext.request.contextPath}/register" target="_blank">免费注册</a>
+                <a href="${pageContext.request.contextPath}/face/register">免费注册</a>
+            </div>
+            <div class="error_message">
+                <p id="error_message_q"></p>
             </div>
         </div>
     </div>

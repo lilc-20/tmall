@@ -25,18 +25,6 @@ $(function () {
             $(this).removeClass("loginSwitch_two").addClass("loginSwitch");
         }
 
-        $.ajax({
-            type: "GET",
-            url: "/tmall/face/getQRcode",
-            data: null,
-            dataType: "json",
-            success: function (data) {
-                if (data.success) {
-
-                }
-            }
-        });
-
     });
     $("#pwdLogin").click(function () {
         var messageSpan = $(".loginMessageMain").children("span");
@@ -83,4 +71,58 @@ $(function () {
     $(".loginForm :text,.loginForm :password").focus(function () {
         styleUtil.errorHide($("#error_message_p"));
     });
+
+    $("#openCamera").click(function getMedia(){
+        let constraints = {video: true};
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(function (stream) {
+                // 旧的浏览器可能没有srcObject
+                if ("srcObject" in video) {
+                    video.srcObject = stream;
+                } else {
+                    // 防止在新的浏览器里使用它，应为它已经不再支持了
+                    video.src = window.URL.createObjectURL(stream);
+                }
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                };
+            })
+            .catch(function (err) {
+                console.log(err.name + ": " + err.message);
+            });
+    })
+
+    $("#closeCamera").click(function stopStreamedVideo() {
+        let video = document.getElementById("video");
+        const stream = video.srcObject;
+        const tracks = stream.getTracks();
+
+        tracks.forEach(function(track) {
+            track.stop();
+        });
+
+        video.srcObject = null;
+    });
+
+    let canvas = document.getElementById("canvas");
+    let context = canvas.getContext("2d");
+    //注册拍照按钮的单击事件
+    $("#faceLogin").click(function () {
+        context.drawImage(video, 0, 0, 200, 200);
+
+        $.ajax({
+            type: "POST",
+            url: "/tmall/face/login",
+            data: {"face" : canvas.toDataURL()},
+            dataType: "json",
+            success: function (data) {
+                if (data.success) {
+                    location.href = "/tmall";
+                } else {
+                    styleUtil.errorShow($("#error_message_q"), "识别失败");
+                }
+            }
+        });
+    });
+
 });

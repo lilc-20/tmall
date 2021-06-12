@@ -72,4 +72,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.select_Name_Phone(user_name, user_phone);
     }
 
+    @Override
+    public User faceLogin(String user_name) {
+        return userMapper.selectByUserName(user_name);
+    }
+
 }

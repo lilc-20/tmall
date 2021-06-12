@@ -24,4 +24,6 @@ public interface UserMapper {
     Integer updatePwd(@Param("user_name") String user_name, @Param("user_password") String user_password);
 
     Integer select_Name_Phone(@Param("user_name") String user_name, @Param("user_phone") String user_phone);
+
+    User selectByUserName(@Param("user_name") String user_name);
 }

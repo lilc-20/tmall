@@ -129,4 +129,10 @@
             user_name = #{user_name}
         </where>
     </update>
+
+    <select id="selectByUserName" parameterType="String" resultMap="userMap">
+        SELECT user_id,user_name,user_nickname,user_password,user_realname,user_gender,user_birthday,user_profile_picture_src,user_address,user_homeplace FROM user
+        where
+        user_name = #{user_name}
+    </select>
 </mapper>
