@@ -35,7 +35,7 @@ public class ForeUserController extends BaseController{
     @Resource(name="userService")
     private UserService userService;
 
-    //转到前台天猫-用户详情页
+    //转到前台-用户详情页
     @RequestMapping(value = "userDetails", method = RequestMethod.GET)
     public String goToUserDetail(HttpSession session, Map<String,Object> map){
         logger.info("检查用户是否登录");
@@ -68,7 +68,7 @@ public class ForeUserController extends BaseController{
             return "redirect:/login";
         }
     }
-    //前台天猫-用户更换头像
+    //前台-用户更换头像
     @ResponseBody
     @RequestMapping(value = "user/uploadUserHeadImage", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     public  String uploadUserHeadImage(@RequestParam MultipartFile file, HttpSession session
@@ -93,7 +93,7 @@ public class ForeUserController extends BaseController{
         }
         return jsonObject.toJSONString();
     }
-    //前台天猫-用户详情更新
+    //前台-用户详情更新
     @RequestMapping(value="user/update",method=RequestMethod.POST,produces ="application/json;charset=utf-8")
     public String userUpdate(HttpSession session, Map<String,Object> map,
                              @RequestParam(value = "user_nickname") String user_nickname  /*用户昵称 */,

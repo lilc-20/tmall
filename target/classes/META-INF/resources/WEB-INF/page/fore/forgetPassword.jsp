@@ -3,7 +3,7 @@
 <head>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_forgetPassword.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_register.css" rel="stylesheet">
-    <title>天猫tmall.com - 忘记密码</title>
+    <title>忘记密码</title>
     <style rel="stylesheet">
         #nav {
             width: auto;
@@ -22,7 +22,7 @@
     <div class="header">
         <div id="mallLogo">
             <a href="${pageContext.request.contextPath}"><img
-                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"><span
+                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"><span
                     class="span_tmallRegister">找回密码</span></a>
         </div>
     </div>

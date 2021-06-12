@@ -3,7 +3,7 @@
 <head>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_productPayPage.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_orderPay.css" rel="stylesheet"/>
-    <title>天猫tmall.com - 网上支付</title>
+    <title>网上支付</title>
     <style type="text/css">
         .frm_label{
             cursor: pointer;
@@ -82,7 +82,7 @@
     <div class="header">
         <div id="mallLogo">
             <a href="${pageContext.request.contextPath}"><img
-                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"></a>
+                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"></a>
         </div>
     </div>
 </nav>
@@ -91,15 +91,15 @@
         <c:choose>
             <c:when test="${fn:length(requestScope.productOrder.productOrderItemList)==1}">
                 <div class="order_name">
-                    <span>天猫Tmall -- ${requestScope.productOrder.productOrderItemList[0].productOrderItem_product.product_name}</span>
+                    <span>hzau_mall -- ${requestScope.productOrder.productOrderItemList[0].productOrderItem_product.product_name}</span>
                 </div>
                 <div class="order_shop_name">
-                    <span>卖家昵称：天猫${requestScope.productOrder.productOrderItemList[0].productOrderItem_product.product_category.category_name}旗舰店</span>
+                    <span>卖家昵称：${requestScope.productOrder.productOrderItemList[0].productOrderItem_product.product_category.category_name}旗舰店</span>
                 </div>
             </c:when>
             <c:otherwise>
                 <div class="order_name">
-                    <span>天猫Tmall -- 合并订单：${fn:length(requestScope.productOrder.productOrderItemList)}笔</span>
+                    <span>合并订单：${fn:length(requestScope.productOrder.productOrderItemList)}笔</span>
                 </div>
             </c:otherwise>
         </c:choose>

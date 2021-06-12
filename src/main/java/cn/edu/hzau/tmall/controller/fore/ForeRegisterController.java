@@ -31,7 +31,7 @@ public class ForeRegisterController extends BaseController{
     @Resource(name="userService")
     private UserService userService;
 
-    //转到前台天猫-用户注册页
+    //转到前台-用户注册页
     @RequestMapping(value = "register", method = RequestMethod.GET)
     public String goToPage(Map<String,Object> map) {
         String addressId = "110000";
@@ -51,7 +51,7 @@ public class ForeRegisterController extends BaseController{
         return "fore/register";
     }
 
-    //天猫前台-用户注册-ajax
+    //前台-用户注册-ajax
     @ResponseBody
     @RequestMapping(value = "register/doRegister", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public String register(

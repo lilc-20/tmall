@@ -27,7 +27,7 @@ public class ForeForgetPasswordController extends BaseController{
     @Resource(name="userService")
     private UserService userService;
 
-    //转到前台天猫-忘记密码页
+    //转到前台-忘记密码页
     @RequestMapping(value = "forgetPassword", method = RequestMethod.GET)
     public String goToPage() {
         return "fore/forgetPassword";

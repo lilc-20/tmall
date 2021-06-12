@@ -3,7 +3,7 @@
 <head>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_productBuyCar.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_productBuyCarPage.css" rel="stylesheet"/>
-    <title>Tmall.com天猫 - 购物车</title>
+    <title>购物车</title>
     <script>
         $(function () {
             $('#btn-ok').click(function () {
@@ -44,7 +44,7 @@
     <div class="header">
         <div id="mallLogo">
             <a href="${pageContext.request.contextPath}"><img
-                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"><span
+                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"><span
                     class="span_tmallBuyCar">购物车</span></a>
         </div>
         <div class="shopSearchHeader">

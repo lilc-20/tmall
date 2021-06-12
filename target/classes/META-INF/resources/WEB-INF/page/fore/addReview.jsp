@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_addReview.css" rel="stylesheet"/>
-    <title>添加评论 - Tmall.com天猫-理想生活上天猫</title>
+    <title>添加评论</title>
     <script>
         $(function () {
             $("#review_form").submit(function () {
@@ -25,7 +25,7 @@
 <div class="header">
     <div id="mallLogo">
         <a href="${pageContext.request.contextPath}"><img
-                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"></a>
+                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"></a>
     </div>
     <div class="shopSearchHeader">
         <form action="${pageContext.request.contextPath}/product" method="get">

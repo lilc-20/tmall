@@ -27,12 +27,12 @@
             border-bottom: 1px solid #e5e5e5;
         }
     </style>
-    <title>天猫-登录</title>
+    <title>登录</title>
 </head>
 <body>
 <nav id="baseNavigator">
     <a href="${pageContext.request.contextPath}" target="_self">
-        <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"/>
+        <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"/>
     </a>
 </nav>
 <div class="content">

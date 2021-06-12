@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_orderConfirmPage.css" rel="stylesheet"/>
-    <title>确认收货 - Tmall.com天猫-理想生活上天猫</title>
+    <title>确认收货</title>
     <script>
 
     </script>
@@ -14,7 +14,7 @@
 <div class="header">
     <div id="mallLogo">
         <a href="${pageContext.request.contextPath}"><img
-                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"></a>
+                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau.png"></a>
     </div>
     <div class="shopSearchHeader">
         <form action="${pageContext.request.contextPath}/product" method="get">

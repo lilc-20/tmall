@@ -4,14 +4,14 @@
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_login.js"></script>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_productDetails.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_productDetails.css" rel="stylesheet">
-    <title>${requestScope.product.product_name}-tmall.com天猫</title>
+    <title>${requestScope.product.product_name}</title>
 </head>
 <body>
 <nav>
     <%@ include file="include/navigator.jsp" %>
     <div class="header">
         <a href="${pageContext.request.contextPath}"><img
-                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoB.png"></a>
+                src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/hzau_small.png"></a>
         <span class="shopNameHeader">${requestScope.product.product_category.category_name}官方旗舰店</span>
         <input id="tid" type="hidden" value="${requestScope.product.product_category.category_id}"/>
         <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/detailsHeaderA.png"
@@ -21,7 +21,7 @@
                 <div class="shopSearchInput">
                     <input type="text" class="searchInput" name="product_name" placeholder="搜索 商品/品牌/店铺"
                            maxlength="50">
-                    <input type="submit" value="搜天猫" class="searchTmall">
+                    <input type="submit" value="搜全站" class="searchTmall">
                 </div>
                 <input type="submit" value="搜本店" class="searchShop">
             </form>
